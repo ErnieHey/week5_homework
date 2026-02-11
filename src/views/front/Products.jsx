@@ -24,18 +24,19 @@ function Products() {
   }, []);
 
   const readyMore = async (id) => {
-    try {
-      const response = await axios.get(`${API_BASE}/api/${API_PATH}/product/${id}`);
-      console.log(response.data.product);
-      navigate(`/product/${id}`,{
-        state: {
-          productData: response.data.product,
-        }
-      });
-    } catch (error) {
-      console.error(error.response);
-  }
-};
+    navigate(`/product/${id}`);
+//     try {
+//       const response = await axios.get(`${API_BASE}/api/${API_PATH}/product/${id}`);
+//       console.log(response.data.product);
+//       navigate(`/product/${id}`,{
+//         state: {
+//           productData: response.data.product,
+//         }
+//       });
+//     } catch (error) {
+//       console.error(error.response);
+//   }
+ };
     return (
       <div className="container py-5">
         <div className="row">
